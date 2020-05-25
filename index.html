@@ -22,36 +22,36 @@
      </nav>
    </header>
    <main>
-     <h1>Дизайн-студия Нёрдс</h1>
+     <h1 class="visually-hidden">Дизайн-студия Нёрдс</h1>
      <section class="advantages">
-       <h2>Достоинства</h2>
-       <div class="slide-1">
-        <h3>Долго, дорого, скрупулезно.</h3>
-        <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
-        <a href="#">Узнать больше</a>
-      </div>
-      <div class="img-slide-1">
-        <img src="img/nerds-index-slide1 1.png" width="760" height="431" alt="Картинка первого слайда">
-      </div>
-      <div class="slide-2">
+       <h2 class="visually-hidden">Достоинства</h2>
+       <figure class="slide-1">
+           <img src="img/nerds-index-slide1 1.png" width="760" height="431" alt="Картинка первого слайда">
+         <figcaption>
+           <h3>Долго, дорого, скрупулезно.</h3>
+           <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
+           <a href="#">Узнать больше</a>
+         </figcaption>
+       </figure>
+      <figure class="slide-2">
+        <img src="img/nerds-index-slide2 1.png" width="760" height="431" alt="Картинка второго слайда">
+        <figcaption>
         <h3>Любим математику как никто другой</h3>
         <p>Никакого креатива, только математические формулы для расчета идеальных пропорций</p>
         <a href="#">Узнать больше</a>
-      </div>
-      <div class="img-slide-2">
-        <img src="img/nerds-index-slide2 1.png" width="760" height="431" alt="Картинка второго слайда">
-      </div>
-      <div class="slide-3">
+        </figcaption>
+      </figure>
+      <figure class="slide-3">
+       <img src="img/nerds-index-slide3 1.png" width="760" height="431" alt="Картинка третьего слайда">
+       <figcaption>
         <h3>Только ночь, только хардкор</h3>
         <p>Работать днём, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
         <a href="#">Узнать больше</a>
-      </div>
-      <div class="img-slide-3">
-        <img src="img/nerds-index-slide3 1.png" width="760" height="431" alt="Картинка третьего слайда">
-      </div>
+       </figcaption>
+      </figure>
      </section>
      <section class="suggestions">
-      <h2>Наши продукты</h2>
+      <h2 class="visually-hidden">Наши продукты</h2>
       <ul class="suggestions-list">
         <li class="suggestions-item">
           <img src="img/illustration-1 1.png" width="300" height="146" alt="Логотип веб-сайтов">
@@ -74,7 +74,7 @@
       </ul>
      </section>
      <section class="about">
-       <h2>О нас</h2>
+       <h2 class="visually-hidden">О нас</h2>
        <p>Мы - маленькая, но очень гордая дизайн-студия из Краснодара.</p>
        <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчёт превыше креатива. Работаем не покладая рук,как роботы.</p>
        <ul class="offers-list"> Заказы на разработку:
@@ -101,18 +101,19 @@
          </li>
        </ul>
      </section>
-     <section class="partners">
-       <ul class="partners-list">
-         <li class="partners-item">
+     <section class="clients">
+       <h2 class="visually-hidden">Наши клиенты</h2>
+       <ul class="clients-list">
+         <li class="clients-item">
            <img src="img/group 5.png" width="199" height="68" alt="Логотип компании HTML-academy">
          </li>
-         <li class="partners-item">
+         <li class="clients-item">
            <img src="img/logo-2 1.png" width="209" height="90" alt="Логотип компании Barbershop Borodinski">
          </li>
-         <li class="partners-item">
+         <li class="clients-item">
            <img src="img/logo-3 1.png" width="185" height="52" alt="Логотип компании Pink">
          </li>
-         <li class="partners-item">
+         <li class="clients-item">
            <img src="img/logo-4 1.png" width="173" height="84" alt="Логотип компании Mishka">
          </li>
        </ul>
@@ -129,32 +130,46 @@
        <img src="img/map 1.png" width="1440" height="416" alt="Карта с координатами компании">
        <img src="img/map-marker 1.png" width="231" height="190" alt="Маркер компании">
      -->
-   </section>
-     <!--Попап с обратной связью
+     </section>
      <section class="connection">
-       <h2>Напишите нам</h2>
-        форма обратной связи
-      </section>
-           -->
-    </main>
+       <form action="https://echo.htmlacademy.ru" method="post">
+        <h2>Напишите нам</h2>
+        <p>
+         <label for="appointment-name">Ваше имя:</label>
+         <input id="appointment-name" type="text" name="name" placeholder="Имя Фамилия">
+        </p>
+        <p>
+         <label for="appointment-emai">Ваш email:</label>
+         <input id="appointment-email" type="email" name="email" placeholder="email@example.com">
+        </p>
+         <label for="appointment-comments">Текст письма:</label>
+         <textarea id="appointment-comments" name="comments" rows="4" placeholder="В свободной форме"></textarea>
+        <p>
+        <button type="button">Отправить</button>
+       </form>
+     </section>
+   </main>
    <footer>
      <section class="social">
-       <h2>Мы в социальных сетях</h2>
+       <h2 class="visually-hidden">Мы в социальных сетях</h2>
        <ul class="social-list">
         <li class="social-item">
          <a href="#">
            <img src="img/vk-icon.svg" width="26" height="15" alt="Логотип Вконтакте">
-           Вконтакте</a>
+           <p class="visually-hidden">Вконтакте</p>
+         </a>
         </li>
         <li class="social-item">
          <a href="#">
            <img src="img/fb-icon.svg" width="12" height="22" alt="Логотип Facebook">
-           Фейсбук</a>
+           <p class="visually-hidden">Фейсбук</p>
+         </a>
         </li>
         <li class="social-item">
          <a href="#">
            <img src="img/insta-icon.svg" width="21" height="21" alt="Логотип Instagram">
-           Инстаграм</a>
+           <p class="visually-hidden">Инстаграм</p>
+         </a>
         </li>
        </ul>
     </section>
