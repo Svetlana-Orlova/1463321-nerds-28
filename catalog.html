@@ -3,10 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header>
-     <nav>
+     <nav class="main-navigation">
       <a href="index.html">
          <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип сайта Нёрдс">
       </a>
@@ -16,91 +19,107 @@
         <li class="nav-item"><a href="catalog.html">Магазин</a></li>
         <li class="nav-item"><a href="#">Контакты</a></li>
       </ul>
-      <a href="#">
+      <div class="main-basket">
+       <a href="#">
         <img src="img/cart-icon.svg" width="15" height="15" alt="Корзина">
-        Корзина</a>
+       </a>
+       <div class="nav-list">
+        <a href="#">Корзина</a>
+       </div>
+      </div>
      </nav>
     </header>
-    <aside class="filter">
-      <form action="https://echo.htmlacademy.ru" method="get">
+    <main>
+     <h1>Магазин готовых шаблонов</h1>
+     <div class="aside-bar">
+      <aside class="main-aside">
+       <form action="https://echo.htmlacademy.ru" method="get">
         <fielset class="price">
           <legend>Стоимость:</legend>
-      <!--Стоимость с двумя ползунками позднее с JS подключим. Аналогично с сортировкой по цене и т.д. Пока только фильтр -->
-      <!-- Пока не знаю, как связать изменения ползунка с параллельным изменением значений в полях, где можно и вручную ввести числа. Наверное, без второго ползунка этого сделать пока нельзя. -->
-    <input type="range" id="price-range" min="0" max="15000" step="50">
-    <label for="price-from">от</label>
-    <input type="number" id="price-from" min="0" max="15000" step="50" placeholder="0">
-    <label for="price-to">до</label>
-    <input type="number" id="price-to" min="0" max="15000" step="50" placeholder="15000">
-
-      </fieldset>
-      <fieldset>
-       <legend>Сетка:</legend>
-       <ul class="net-list">
-         <li class="net-item">
-           <input type="radio" name="Adapt" id="filter-adapt-net" checked>
-           <label for="filter-adapt-net">Адаптивная</label>
-         </li>
-         <li class="net-item">
-           <input type="radio" name="fix" id="filter-fix-net">
-           <label for="filter-fix-net">Фиксированная</label>
-         </li>
-         <li class="net-item">
-           <input type="radio" name="stretch" id="filter-stretch-net">
-           <label for="filter-stretch-net">Резиновая</label>
-         </li>
-       </ul>
-      </fieldset>
-      <fieldset>
-        <legend>Особенности:</legend>
-        <ul class="features-list">
-          <li class="features-item">
-            <input type="checkbox" name="slider" id="filter-slider" checked>
-            <label for="filter-slider">Слайдер</label>
-          </li>
-          <li class="features-item">
-            <input type="checkbox" name="benefits-block" id="filter-benefits-block">
-            <label for="filter-benefits-block">Блок преимуществ</label>
-          </li>
-          <li class="features-item">
-            <input type="checkbox" name="news" id="filter-news" checked>
-            <label for="filter-news">Новости</label>
-          </li>
-          <li class="features-item">
-            <input type="checkbox" name="gallery" id="filter-gallery">
-            <label for="filter-gallery">Галерея</label>
-          </li>
-          <li class="features-item">
-            <input type="checkbox" name="basket" id="filter-basket">
-            <label for="filter-basket">Корзина</label>
-          </li>
-        </ul>
-      </fieldset>
-      <fieldset> <!-- В CSS уберем кружочки. За счёт этого выберется один из предложенных вариантов  -->
+      <!--Стоимость с двумя ползунками позднее с JS подключим. -->
+          <div class="range">
+            <div class="line-1">
+              <div class="line-2">
+                <div class="point-left">
+                </div>
+                <div class="point-right">
+                </div>
+              </div>
+            </div>
+          </div>
+          <label for="price-from">от</label>
+          <input type="number" id="price-from" min="0" max="15000" step="50" placeholder="0">
+          <label for="price-to">до</label>
+          <input type="number" id="price-to" min="0" max="15000" step="50" placeholder="15000">
+        </fieldset>
+        <fieldset>
+         <legend>Сетка:</legend>
+          <ul class="net-list">
+           <li class="net-item">
+            <input type="radio" name="catalog" id="filter-adapt-net" checked>
+            <label for="filter-adapt-net">Адаптивная</label>
+           </li>
+           <li class="net-item">
+            <input type="radio" name="catalog" id="filter-fix-net">
+            <label for="filter-fix-net">Фиксированная</label>
+           </li>
+           <li class="net-item">
+            <input type="radio" name="catalog" id="filter-stretch-net">
+            <label for="filter-stretch-net">Резиновая</label>
+           </li>
+          </ul>
+         </fieldset>
+         <fieldset>
+          <legend>Особенности:</legend>
+           <ul class="features-list">
+            <li class="features-item">
+             <input type="checkbox" name="slider" id="filter-slider" checked>
+             <label for="filter-slider">Слайдер</label>
+            </li>
+            <li class="features-item">
+             <input type="checkbox" name="benefits-block" id="filter-benefits-block">
+             <label for="filter-benefits-block">Блок преимуществ</label>
+            </li>
+            <li class="features-item">
+             <input type="checkbox" name="news" id="filter-news" checked>
+             <label for="filter-news">Новости</label>
+            </li>
+            <li class="features-item">
+             <input type="checkbox" name="gallery" id="filter-gallery">
+             <label for="filter-gallery">Галерея</label>
+            </li>
+            <li class="features-item">
+             <input type="checkbox" name="basket" id="filter-basket">
+             <label for="filter-basket">Корзина</label>
+            </li>
+           </ul>
+         </fieldset>
+        <button type="button">Показать</button>
+       </form>
+      </aside>
+     </div>
+     <fieldset>
        <legend>Сортировать:</legend>
        <ul class="sorting-list">
          <li class="sorting-item">
-           <input type="radio" name="price-filter" id="price-filter" checked>
-           <label for="price-filter">По цене</label>
+           <a href="#">По цене</a>
          </li>
          <li class="sorting-item">
-           <input type="radio" name="type" id="type-filter">
-           <label for="type-filter">По типу</label>
+           <a href="#">По типу</a>
          </li>
          <li class="sorting-item">
-           <input type="radio" name="name-filter" id="name-filter">
-           <label for="name-filter">По названию</label>
+           <a href="#">По названию</a>
+         </li>
+         <li class="sorting-item">
+           <a href="#"><img src="img/icon-down-dir.svg" width="11" height="10" alt="По убыванию"></a>
+         </li>
+         <li class="sorting-item">
+           <a href="#"><img src="img/icon-up-dir.svg" width="11" height="10" alt="По возрастанию"></a>
          </li>
        </ul>
-       <!-- По возрастанию и убыванию попозже сделаю, когда пройдём соответствующий раздел -->
       </fieldset>
-      <button type="button">Показать</button>
-      </form>
-    </aside>
-    <main>
-     <h1>Магазин готовых шаблонов</h1>
-     <section class="catalog">
-       <h2 class="visually-hidden">Каталог шаблонов</h2>
+
+      <section class="catalog">
        <ul class="catalog-list">
          <li class="catalog-item">
            <img src="img/browser.svg" width="360" height="40" alt="Декоративный элемент">
@@ -215,26 +234,9 @@
         <img src="img/map-marker 1.png" width="231" height="190" alt="Маркер компании">
       -->
      </section>
-     <section class="connection">
-      <form action="https://echo.htmlacademy.ru" method="post">
-       <h2>Напишите нам</h2>
-       <p>
-        <label for="appointment-name">Ваше имя:</label>
-        <input id="appointment-name" type="text" name="name" placeholder="Имя Фамилия">
-       </p>
-       <p>
-        <label for="appointment-emai">Ваш email:</label>
-        <input id="appointment-email" type="email" name="email" placeholder="email@example.com">
-       </p>
-        <label for="appointment-comments">Текст письма:</label>
-        <textarea id="appointment-comments" name="comments" rows="4" placeholder="В свободной форме"></textarea>
-       <p>
-       <button type="button">Отправить</button>
-      </form>
-     </section>
     </main>
     <footer>
-     <section class="social">
+     <div class="social">
        <h2 class="visually-hidden">Мы в социальных сетях</h2>
        <ul class="social-list">
         <li class="social-item">
@@ -256,10 +258,29 @@
          </a>
         </li>
        </ul>
-     </section>
-     <section class="sale">
+     </div>
+     <div class="sale">
       <h2>Давайте дружить, это выгодно!</h2>
       <p>Скидка 10% для друзей из социальных сетей.</p>
+    </div>
    </footer>
+   <section class="connection">
+     <form action="https://echo.htmlacademy.ru" method="post">
+      <h2>Напишите нам</h2>
+      <p class="place">
+       <label for="appointment-name">Ваше имя:</label>
+       <input id="appointment-name" type="text" name="name" placeholder="Имя Фамилия">
+      </p>
+      <p class="place">
+       <label for="appointment-emai">Ваш email:</label>
+       <input id="appointment-email" type="email" name="email" placeholder="email@example.com">
+      </p>
+      <p class="place">
+       <label for="appointment-comments">Текст письма:</label>
+       <textarea id="appointment-comments" name="comments" rows="4" placeholder="В свободной форме"></textarea>
+      </p>
+      <button type="button">Отправить</button>
+     </form>
+   </section>
   </body>
 </html>
