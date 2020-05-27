@@ -34,12 +34,12 @@ body {
 }
 
 a {
-text-decoration: none;
+  text-decoration: none;
 }
 
 img {
-max-width: 100%;
-height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 .main-navigation {
@@ -47,6 +47,10 @@ height: auto;
   line-height: 30px;
   color: var(--basic-dark-black);
   background-color: var(--basic-light-grey);
+}
+
+.logo:active {
+  opacity: 0.5;
 }
 
 .nav-list {
@@ -61,6 +65,50 @@ height: auto;
 .nav-list a:active {
   color: var(--basic-dark-black);
   opacity: 0.3;
+}
+
+/* Стиль для ссылок, на которых сейчас находишься.
+ Пока не получается сделать красную полоску внизу */
+
+.nav-item-current {
+  padding: 0 0 13px 0;
+  border-bottom: 2px solid;
+  border-bottom-color: var(--basic-red);
+}
+
+figure {
+  background-color: var(--basic-light-grey);
+}
+
+figcaption h3{
+  font-size: 55px;
+  line-height: 55px;
+  color: var(--basic-dark-black);
+}
+
+figcaption a {
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+  border-radius: 3px;
+  padding: 17px 54px 15px 54px;
+  font: inherit;
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+
+figcaption a:hover,
+figcaption a:focus {
+  background-color: #E74246;
+}
+
+figcaption a:active {
+  background-color: #D7373B;
+  opacity: 0.3;
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
 
 .suggestions-list {
@@ -148,6 +196,7 @@ text-align: left;
 }
 
 .offers-list {
+  list-style:none;
   list-style-image: url(img/Rectangle 12.svg) 25px 2px;
 }
 
@@ -197,14 +246,58 @@ color: var(--basic-dark-black);
 .clients-item a:active {
   opacity: 0.1;
 }
+.contacts h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.contacts p {
+  line-height: 18px;
+  color: #666666;
+}
+
+.contacts a {
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+  border-radius: 3px;
+  padding: 17px 44px 15px 44px;
+  font: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.contacts a :hover,
+.contacts a :focus {
+  background-color: #E74246;
+}
+
+.contacts a:active {
+  background-color: #D7373B;
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+}
 
 .social-list {
  list-style: none;
 }
 
-.social-list a {
-  border-radius: 50%;
-  background: linear-gradient(0deg, #E1E1E1, #E1E1E1), #FFFFFF;
+.social-item img {
+  border-radius: 100px;
+  background-color: #E1E1E1;
+}
+
+.facebook {
+  padding: 31px 34px 28px 35px;
+}
+.Vkontakte {
+  padding: 32px 27px 31px 25px;
+}
+.instagram {
+  padding: 30px 30px 30px 30px;
 }
 
 .social-list a:hover,
@@ -277,13 +370,11 @@ textarea:focus {
   opacity: 1;
 }
 
-/* Стиль для невалидных значений
- {
+ .place input:invalid {
   border-color: #E74246;
   color: #E74246;
   opacity: 1;
 }
-*/
 
 .connection button {
   color: var(--basic-white);
@@ -306,5 +397,233 @@ textarea:focus {
 .connection button:active {
   background-color: #D7373B;
   opacity: 0.3;
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+}
+
+/* Стили для каталога*/
+
+h1 {
+  font-size: 55px;
+  line-height: 55px;
+  color: var(--basic-dark-black);
+  text-align: center;
+}
+
+legend {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.sorting ul,
+.main-aside ul {
+   list-style: none;
+}
+
+/* Плашка с бегунками
+
+.range {
+  background-color: var(--basic-light-grey);
+  border-radius: 3px;
+}
+
+.range.line-1 {
+  background-color: #D7DCDF;
+  padding: 39px 22px 39px 33px;
+}
+
+.line-1.line-2 {
+  background-color: var(--basic-green);
+  padding-right: 67px;
+  padding-left: 15px;
+}
+
+.line-2.point-left,
+.line-2.point-right {
+  background-color: var(--basic-white) ;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.15);
+}
+
+*/
+
+.filter ul {
+  line-height: 19px;
+}
+
+.filter-input {
+  opacity: 0.4;
+  color: #4D4D4D;
+}
+
+.filter-input:hover {
+  opacity: 1;
+  color: #4D4D4D;
+}
+
+.filter-input:disabled {
+  opacity: 0.1;
+  color: #4D4D4D;
+}
+
+.filter-input label:disabled {
+  opacity: 0.3;
+}
+
+.filter button {
+ border-radius: 3px;
+ background-color: var(--basic-light-grey);
+ color: var(--basic-dark-black);
+ text-transform: uppercase;
+ text-align: center;
+ font: inherit;
+ line-height: 18px;
+ padding: 17px 89px 15px 88px;
+}
+
+.filter button:hover,
+.filter button:focus {
+  background-color: #DFDFDF;
+}
+
+.filter button:active {
+  background-color:  #D5D5D5;
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+}
+
+.sorting-list {
+  list-style: none;
+}
+
+.sorting-list a {
+  color: var(--basic-dark-black);
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  opacity: 0.3;
+}
+
+.sorting-list a:hover,
+.sorting-list a:focus {
+  opacity: 0.6;
+}
+
+.sorting-list a:active {
+  opacity: 1;
+}
+
+.rotate-image {
+    transform: rotate(180deg);
+   }
+
+.page-list {
+  list-style:none;
+}
+
+.page-list a{
+  color: var(--basic-dark-black);
+  font: inherit;
+  line-height: 18px;
+  border-radius: 3px;
+  background-color: var(--basic-light-grey);
+  padding: 17px 20px 15px 20px;
+  text-align: center;
+}
+
+.page-list.next {
+  text-transform: uppercase;
+  padding: 17px 77px 15px 78px;
+}
+
+.page-list a:hover,
+.page-list a:focus {
+  background-color: #DFDFDF;
+}
+
+.page-list a:active {
+  background-color: #D5D5D5;
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+}
+
+.page-item-current a,
+.page-item-current a:hover,
+.page-item-current a:focus,
+.page-item-current a:active{
+  box-sizing: border-box;
+  border: 3px solid #DBDBDB;
+  background-color: rgba(0, 0, 0, 0.0001);
+}
+
+  /*  Оформление карточек товара*/
+
+.catalog-list {
+    list-style: none;
+  }
+
+.catalog-item.element {
+  opacity: 0.12;
+  margin-bottom: 0;
+}
+
+.catalog-item a {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  background-color: #F2F2F2;
+}
+
+.common-element {
+  border-radius: 5px;
+}
+
+.common-element:focus,
+.common-element:hover {
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.description h4 {
+  color: var(--basic-dark-black);
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.description a:hover,
+.description a:focus {
+  color: var(--basic-red);
+}
+
+.description a:focus {
+  color: var(--basic-dark-black);
+  opacity: 0.3;
+}
+
+.description p {
+  line-height: 18px;
+  text-align: center;
+  color: #666666;
+}
+
+.catalog-item button {
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+  border-radius: 3px;
+  padding: 17px 72px 15px 72px;
+  font: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.catalog-item button:hover,
+.catalog-item button:focus {
+  background-color: #E74246;
+}
+
+.catalog-item button:active {
+  background-color: #D7373B;
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }

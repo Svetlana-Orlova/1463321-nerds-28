@@ -4,19 +4,19 @@
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link href="normalize.css" rel="stylesheet">
+    <link href="css/normalize.css-master/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header>
      <nav class="main-navigation">
       <a href="index.html">
-         <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип сайта Нёрдс">
+         <img src="img/nerds-logo.svg" width="160" height="65" class="logo" alt="Логотип сайта Нёрдс">
       </a>
       <ul class="nav-list">
         <li class="nav-item"><a href="#">Студия</a></li>
         <li class="nav-item"><a href="#">Клиенты</a></li>
-        <li class="nav-item"><a href="catalog.html">Магазин</a></li>
+        <li class="nav-item nav-item-current"><a href="catalog.html">Магазин</a></li>
         <li class="nav-item"><a href="#">Контакты</a></li>
       </ul>
       <div class="main-basket">
@@ -33,7 +33,7 @@
      <h1>Магазин готовых шаблонов</h1>
      <div class="aside-bar">
       <aside class="main-aside">
-       <form action="https://echo.htmlacademy.ru" method="get">
+       <form  class="filter" action="https://echo.htmlacademy.ru" method="get">
         <fielset class="price">
           <legend>Стоимость:</legend>
       <!--Стоимость с двумя ползунками позднее с JS подключим. -->
@@ -56,15 +56,15 @@
          <legend>Сетка:</legend>
           <ul class="net-list">
            <li class="net-item">
-            <input type="radio" name="catalog" id="filter-adapt-net" checked>
+            <input type="radio" class="filter-input" name="catalog" id="filter-adapt-net" checked>
             <label for="filter-adapt-net">Адаптивная</label>
            </li>
            <li class="net-item">
-            <input type="radio" name="catalog" id="filter-fix-net">
+            <input type="radio" class="filter-input" name="catalog" id="filter-fix-net">
             <label for="filter-fix-net">Фиксированная</label>
            </li>
            <li class="net-item">
-            <input type="radio" name="catalog" id="filter-stretch-net">
+            <input type="radio" class="filter-input" name="catalog" id="filter-stretch-net">
             <label for="filter-stretch-net">Резиновая</label>
            </li>
           </ul>
@@ -73,32 +73,33 @@
           <legend>Особенности:</legend>
            <ul class="features-list">
             <li class="features-item">
-             <input type="checkbox" name="slider" id="filter-slider" checked>
+             <input type="checkbox" class="filter-input" name="slider" id="filter-slider" checked>
              <label for="filter-slider">Слайдер</label>
             </li>
             <li class="features-item">
-             <input type="checkbox" name="benefits-block" id="filter-benefits-block">
+             <input type="checkbox" class="filter-input" name="benefits-block" id="filter-benefits-block">
              <label for="filter-benefits-block">Блок преимуществ</label>
             </li>
             <li class="features-item">
-             <input type="checkbox" name="news" id="filter-news" checked>
+             <input type="checkbox" class="filter-input" name="news" id="filter-news" checked>
              <label for="filter-news">Новости</label>
             </li>
             <li class="features-item">
-             <input type="checkbox" name="gallery" id="filter-gallery">
+             <input type="checkbox" class="filter-input" name="gallery" id="filter-gallery">
              <label for="filter-gallery">Галерея</label>
             </li>
             <li class="features-item">
-             <input type="checkbox" name="basket" id="filter-basket">
+             <input type="checkbox" class="filter-input" name="basket" id="filter-basket">
              <label for="filter-basket">Корзина</label>
             </li>
            </ul>
          </fieldset>
-        <button type="button">Показать</button>
+        <button class="show" type="button">Показать</button>
        </form>
       </aside>
      </div>
-     <fieldset>
+     <div class"sorting">
+      <fieldset>
        <legend>Сортировать:</legend>
        <ul class="sorting-list">
          <li class="sorting-item">
@@ -114,92 +115,94 @@
            <a href="#"><img src="img/icon-down-dir.svg" width="11" height="10" alt="По убыванию"></a>
          </li>
          <li class="sorting-item">
-           <a href="#"><img src="img/icon-up-dir.svg" width="11" height="10" alt="По возрастанию"></a>
+           <a href="#"><img src="img/icon-down-dir.svg" class="rotate-image" width="11" height="10" alt="По возрастанию"></a>
          </li>
-       </ul>
-      </fieldset>
-
+        </ul>
+       </fieldset>
+      </div>
       <section class="catalog">
        <ul class="catalog-list">
          <li class="catalog-item">
-           <img src="img/browser.svg" width="360" height="40" alt="Декоративный элемент">
+           <img src="img/browser.svg" width="360" height="40" class="element" alt="Декоративный элемент">
            <a href="#">
             <h3 class="visually-hidden">Проект Sedona</h3>
             <img src="img/img-sedona 1.jpg" width="360" height="580" alt="Проект Sedona">
            </a>
            <!-- попап с ценником -->
             <div class="description">
-             <h4>Sedona</h4>
+             <a href="#"><h4>Sedona</h4></a>
              <p>Информационный сайт<br>
                 для туристов</p>
              <button type="button">9 900 ₽</button>
             </div>
          </li>
          <li class="catalog-item">
-           <img src="img/browser.svg" width="360" height="40" alt="Декоративный элемент">
+           <img src="img/browser.svg" width="360" height="40" class="element" alt="Декоративный элемент">
            <a href="#">
             <h3 class="visually-hidden">Проект Pink</h3>
             <img src="img/img-pink 1.jpg" width="358" height="578" alt="Проект Pink">
            </a>
            <!-- попап с ценником -->
             <div class="description">
-             <h4>Pink app</h4>
+             <a href="#"><h4>Pink app</h4></a>
              <p>Продуктивный лендинг<br>
                приложения для iOS и Android</p>
              <button type="button">9 900 ₽</button>
            </div>
          </li>
          <li class="catalog-item">
-           <img src="img/browser.svg" width="360" height="40" alt="Декоративный элемент">
+           <img src="img/browser.svg" width="360" height="40" class="element" alt="Декоративный элемент">
             <a href="#">
              <h3 class="visually-hidden">Проект Borodinski</h3>
              <img src="img/img-barbershop 1.jpg" width="358" height="578" alt="Проект Borodinski">
             </a>
             <!-- попап с ценником -->
              <div class="description">
-              <h4>Barbershop</h4>
+              <a href="#"><h4>Barbershop</h4></a>
               <p>Сайт салона красоты.<br>
             Для мужчин, да. </p>
               <button type="button">9 900 ₽</button>
             </div>
          </li>
          <li class="catalog-item">
-           <img src="img/browser.svg" width="360" height="40" alt="Декоративный элемент">
+           <img src="img/browser.svg" width="360" height="40" class="element" alt="Декоративный элемент">
              <a href="#">
               <h3 class="visually-hidden">Проект Mishka</h3>
               <img src="img/img-mishka 1.jpg" width="358" height="578" alt="Проект Mishka">
              </a>
              <!-- попап с ценником -->
               <div class="description">
-               <h4>Mishka</h4>
+               <a href="#"><h4>Mishka</h4></a>
                <p>Интернет-магазин<br>
                  вязаных игрушек</p>
                <button type="button">9 900 ₽</button>
              </div>
          </li>
          <li class="catalog-item">
-           <img src="img/browser.svg" width="360" height="40" alt="Декоративный элемент">
+           <div class="common-element">
+             <img src="img/browser.svg" width="360" height="40" class="element" alt="Декоративный элемент">
               <a href="#">
                <h3 class="visually-hidden">Проект обучающего ресурса А+</h3>
                <img src="img/img-aplus 1.jpg" width="358" height="578" alt="Проект обучающего ресурса А+">
               </a>
+            </div>
               <!-- попап с ценником -->
                <div class="description">
-                <h4>А plus</h4>
+                <a href="#"><h4>А plus</h4><a>
                 <p>Лендинг курсов повышения<br>
                  квалификации </p>
                 <button type="button">9 900 ₽</button>
               </div>
          </li>
          <li class="catalog-item">
-           <img src="img/browser.svg" width="360" height="40" alt="Декоративный элемент">
+           <img src="img/browser.svg" width="360" height="40" class="element" alt="Декоративный элемент">
            <a href="#">
             <h3 class="visually-hidden">Проект Кваст</h3>
             <img src="img/img-kvast 1.jpg" width="358" height="578" alt="Проект Кваст">
            </a>
            <!-- попап с ценником -->
             <div class="description">
-             <h4>Кваст</h4>
+             <a href="#"><h4>Кваст</h4></a>
              <p>Промо-сайт производителя<br>
                крафтового кваса</p>
              <button type="button">9 900 ₽</button>
@@ -208,7 +211,7 @@
         </ul>
         <ul class="page-list"> <!--Пагинация -->
          <li class="page-item">
-          <a>1</a>
+          <a class="page-item-current">1</a>
          </li>
          <li class="page-item">
            <a href="#">2</a>
@@ -217,7 +220,7 @@
            <a href="#">3</a>
          </li>
          <li class="page-item">
-           <a href="#">Следующая</a>
+           <a href="#" class"next">Следующая</a>
          </li>
         </ul>
       </section>
@@ -241,19 +244,19 @@
        <ul class="social-list">
         <li class="social-item">
          <a href="#">
-           <img src="img/vk-icon.svg" width="26" height="15" alt="Логотип Вконтакте">
+           <img src="img/vk-icon.svg" class="Vkontakte" width="26" height="15" alt="Логотип Вконтакте">
            <p class="visually-hidden">Вконтакте</p>
          </a>
         </li>
         <li class="social-item">
          <a href="#">
-           <img src="img/fb-icon.svg" width="12" height="22" alt="Логотип Facebook">
+           <img src="img/fb-icon.svg" class="facebook" width="12" height="22" alt="Логотип Facebook">
            <p class="visually-hidden">Фейсбук</p>
          </a>
         </li>
         <li class="social-item">
          <a href="#">
-           <img src="img/insta-icon.svg" width="21" height="21" alt="Логотип Instagram">
+           <img src="img/insta-icon.svg" class="instagram" width="21" height="21" alt="Логотип Instagram">
            <p class="visually-hidden">Инстаграм</p>
          </a>
         </li>
