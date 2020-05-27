@@ -78,6 +78,7 @@ img {
 
 figure {
   background-color: var(--basic-light-grey);
+  margin-top: 0px;
 }
 
 figcaption h3{
@@ -302,11 +303,11 @@ color: var(--basic-dark-black);
 
 .social-list a:hover,
 .social-list a:focus {
-  background: linear-gradient(0deg, #E74246, #E74246);
+  background-color: #E74246;
 }
 
 .social-list a:active {
-  background: linear-gradient(0deg, #D7373B, #D7373B);
+  background-color: #D7373B;
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
   opacity: 0.3;
 }
@@ -377,6 +378,7 @@ textarea:focus {
 }
 
 .connection button {
+  border: 0px;
   color: var(--basic-white);
   background-color: var(--basic-red);
   border: 0px;
@@ -471,6 +473,7 @@ legend {
 }
 
 .filter button {
+ border: 0px;
  border-radius: 3px;
  background-color: var(--basic-light-grey);
  color: var(--basic-dark-black);
@@ -560,15 +563,16 @@ legend {
     list-style: none;
   }
 
-.catalog-item.element {
+.element {
   opacity: 0.12;
   margin-bottom: 0;
 }
 
 .catalog-item a {
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(8, 8, 8, 0.1);
   box-sizing: border-box;
-  background-color: #F2F2F2;
+  background-color: #888888;
+  margin-top: 0px;
 }
 
 .common-element {
@@ -577,7 +581,9 @@ legend {
 
 .common-element:focus,
 .common-element:hover {
+  border: 0px;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  opacity: 1;
 }
 
 .description h4 {
@@ -606,6 +612,7 @@ legend {
 }
 
 .catalog-item button {
+  border: 0px;
   color: var(--basic-white);
   background-color: var(--basic-red);
   border-radius: 3px;
