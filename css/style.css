@@ -580,11 +580,14 @@ legend {
 }
 
 .sorting-list a:hover,
-.sorting-list a:focus {
+.sorting-list a:focus,
+.sorting-item-add a:focus,
+.sorting-item-add a:hover {
   opacity: 0.6;
 }
 
-.sorting-list a:active {
+.sorting-list a:active,
+.sorting-item-add a:active {
   opacity: 1;
 }
 
