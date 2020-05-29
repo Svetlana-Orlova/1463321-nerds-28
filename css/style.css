@@ -1,14 +1,29 @@
 
 :root {
---basic-light-grey: #EEEEEE;
 --basic-red: #FB565A;
+--red1: #E74246;
+--red2: #D7373B;
 --basic-green: #00CA74;
---basic-yellow: #EFC849;
---basic-white: #ffffff;
+--green1: #00AA62;
+--green2: #00BC6C;
+--basic-yellow: #EFC84A;
+--yellow1: #E5A722;
+--yellow2: #EAB534;
+
 --basic-grey: #00CA74;
+--basic-light-grey: #EEEEEE;
+--grey1: #E1E1E1;
+--grey2: #B4B9BB;
+--grey3: #D5D5D5;
+--grey4: #D7DCDE;
+--grey5: #DFDFDF;
+--grey6: #666666;
+--grey7: #DBDBDB;
+--basic-white: #ffffff;
 --basic-light-black: #444444;
 --basic-dark-black: #000000;
 --basic-black: #283136;
+--black1: #4D4D4D;
 }
 
 .visually-hidden {
@@ -71,11 +86,25 @@ img {
  Пока не получается сделать красную полоску внизу */
 
 .nav-item-current {
-  padding: 0 0 13px 0;
+  padding: 25px 0 23px;
+  border-bottom: 2px solid;
+  border-bottom-color: var(--basic-red);
+  width: 74px;
+}
+
+/*
+.nav-item-current::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  display: block;
+  height: 2px;
+  width: 100%;
   border-bottom: 2px solid;
   border-bottom-color: var(--basic-red);
 }
-
+*/
 figure {
   background-color: var(--basic-light-grey);
   margin-top: 0px;
@@ -103,11 +132,11 @@ figcaption a {
 
 figcaption a:hover,
 figcaption a:focus {
-  background-color: #E74246;
+  background-color: var(--red1);
 }
 
 figcaption a:active {
-  background-color: #D7373B;
+  background-color: var(--red2);
   opacity: 0.3;
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
@@ -142,33 +171,33 @@ text-align: left;
 
 .booking-1:hover,
 .booking-1:focus {
-  background-color: #E74246;
+  background-color: var(--red1);
 }
 
 .booking-1:active {
-  background-color: #D7373B;
+  background-color:  var(--red2);
   opacity: 0.3;
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
 
 .booking-2:hover,
 .booking-2:focus {
-  background-color: #00BC6C;
+  background-color: var(--green2);
 }
 
 .booking-2:active {
-  background-color: #00AA62;
+  background-color: var(--gren1);
   opacity: 0.3;
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
 
 .booking-3:hover,
 .booking-3:focus {
-  background-color: #EAB534;
+  background-color: var(--yellow2);
 }
 
 .booking-3:active {
-  background-color: #E5A722;
+  background-color: var(--yellow1);
   opacity: 0.3;
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
@@ -256,7 +285,7 @@ color: var(--basic-dark-black);
 
 .contacts p {
   line-height: 18px;
-  color: #666666;
+  color: var(--grey6);
 }
 
 .contacts a {
@@ -274,40 +303,48 @@ color: var(--basic-dark-black);
 
 .contacts a :hover,
 .contacts a :focus {
-  background-color: #E74246;
+  background-color: var(--red1);
 }
 
 .contacts a:active {
-  background-color: #D7373B;
+  background-color:  var(--red2);
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
 
 .social-list {
  list-style: none;
+ margin: 0;
+ padding-left: 0;
 }
 
-.social-item img {
-  border-radius: 100px;
-  background-color: #E1E1E1;
+.social-item a {
+  display: flex;
+  width: 81px;
+  height: 81px;
+  border-radius: 50%;
+  background-color: var(--grey1);
 }
 
 .facebook {
   padding: 31px 34px 28px 35px;
+  margin: auto;
 }
 .Vkontakte {
   padding: 32px 27px 31px 25px;
+  margin: auto;
 }
 .instagram {
   padding: 30px 30px 30px 30px;
+  margin: auto;
 }
 
 .social-list a:hover,
 .social-list a:focus {
-  background-color: #E74246;
+  background-color: var(--red1);
 }
 
 .social-list a:active {
-  background-color: #D7373B;
+  background-color:  var(--red2);
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
   opacity: 0.3;
 }
@@ -356,13 +393,13 @@ textarea {
    border: 2px solid;
    box-sizing: border-box;
    border-radius: 3px;
-   border-color: #D7DCDE;
+   border-color: var(--grey4);
    opacity: 0.5;
 }
 
 .place input:hover,
 textarea:hover {
-  border-color: #B4B9BB;
+  border-color: var(--grey2);
 }
 
 .place input:focus,
@@ -372,8 +409,8 @@ textarea:focus {
 }
 
  .place input:invalid {
-  border-color: #E74246;
-  color: #E74246;
+  border-color: var(--red1);
+  color: var(--red1);
   opacity: 1;
 }
 
@@ -393,11 +430,11 @@ textarea:focus {
 
 .connection button:hover,
 .connection button:focus {
-  background-color: #E74246;
+  background-color: var(--red1);
 }
 
 .connection button:active {
-  background-color: #D7373B;
+  background-color: var(--red2);
   opacity: 0.3;
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
@@ -423,31 +460,67 @@ legend {
    list-style: none;
 }
 
-/* Плашка с бегунками
+/* Плашка с бегунками*/
 
 .range {
   background-color: var(--basic-light-grey);
   border-radius: 3px;
+  width: 260px;
+  height: 80px;
 }
 
-.range.line-1 {
-  background-color: #D7DCDF;
-  padding: 39px 22px 39px 33px;
+.range .line-basic {
+  background-color: var(--grey4);
+  top: 39px;
+  margin-left: 33px;
+  position: relative;
+  width: 205px;
+  height: 2px;
 }
 
-.line-1.line-2 {
+.line-1 .line-second {
   background-color: var(--basic-green);
-  padding-right: 67px;
-  padding-left: 15px;
+  margin-top: 37px;
+  margin-left: 33px;
+  position: absolute;
+  width: 138px;
+  height: 2px;
 }
 
-.line-2.point-left,
-.line-2.point-right {
-  background-color: var(--basic-white) ;
+.point-left,
+.point-right {
+  style: none;
+}
+
+.point-left .ellipse-1 {
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  margin-left: 18px;
+  margin-top: 28px;
+  background-color: transparent;
 }
 
-*/
+.point-left .ellipse-2 {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  margin-left: 26px;
+  margin-top: 36px;
+  background-color: transparent;
+  z-index:2;
+}
+
+.point-right .ellipse-3 {
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  margin-left: 160px;
+  margin-top: 28px;
+  background-color: transparent;
+}
+
+.point-left .ellipse-4 {
+  position: absolute;
+  background-color: transparent;
+}
 
 .filter ul {
   line-height: 19px;
@@ -455,17 +528,17 @@ legend {
 
 .filter-input {
   opacity: 0.4;
-  color: #4D4D4D;
+  color: var(--black1);
 }
 
 .filter-input:hover {
   opacity: 1;
-  color: #4D4D4D;
+  color: var(--black1);
 }
 
 .filter-input:disabled {
   opacity: 0.1;
-  color: #4D4D4D;
+  color: var(--black1);
 }
 
 .filter-input label:disabled {
@@ -486,11 +559,11 @@ legend {
 
 .filter button:hover,
 .filter button:focus {
-  background-color: #DFDFDF;
+  background-color: var(--grey5);
 }
 
 .filter button:active {
-  background-color:  #D5D5D5;
+  background-color: var(--grey3);
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
 
@@ -540,11 +613,11 @@ legend {
 
 .page-list a:hover,
 .page-list a:focus {
-  background-color: #DFDFDF;
+  background-color: var(--grey5);
 }
 
 .page-list a:active {
-  background-color: #D5D5D5;
+  background-color: var(--grey3);
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
 
@@ -553,7 +626,7 @@ legend {
 .page-item-current a:focus,
 .page-item-current a:active{
   box-sizing: border-box;
-  border: 3px solid #DBDBDB;
+  border: 3px solid var(--grey7);
   background-color: rgba(0, 0, 0, 0.0001);
 }
 
@@ -582,11 +655,15 @@ legend {
 .common-element:focus,
 .common-element:hover {
   border: 0px;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 6px 15px rgba(0, 1, 1, 0.25);
   opacity: 1;
 }
 
-.description h4 {
+.catalog-item .announcement {
+  background-color: var(--basic-light-grey);
+}
+
+.announcement h4 {
   color: var(--basic-dark-black);
   text-align: center;
   text-transform: uppercase;
@@ -595,20 +672,20 @@ legend {
   line-height: 30px;
 }
 
-.description a:hover,
-.description a:focus {
+.announcement a:hover,
+.announcement a:focus {
   color: var(--basic-red);
 }
 
-.description a:focus {
+.announcement a:focus {
   color: var(--basic-dark-black);
   opacity: 0.3;
 }
 
-.description p {
+.announcement p {
   line-height: 18px;
   text-align: center;
-  color: #666666;
+  color: var(--grey6);
 }
 
 .catalog-item button {
@@ -627,10 +704,10 @@ legend {
 
 .catalog-item button:hover,
 .catalog-item button:focus {
-  background-color: #E74246;
+  background-color: var(--red1);
 }
 
 .catalog-item button:active {
-  background-color: #D7373B;
+  background-color: var(--red2);
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
