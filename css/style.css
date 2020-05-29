@@ -128,6 +128,7 @@ figcaption a {
   line-height: 18px;
   vertical-align: middle;
   text-transform: uppercase;
+  display: block;
 }
 
 figcaption a:hover,
@@ -167,6 +168,7 @@ text-align: left;
   line-height: 18px;
   vertical-align: middle;
   text-transform: uppercase;
+  display: block;
 }
 
 .booking-1:hover,
@@ -221,7 +223,7 @@ text-align: left;
   color: var(--basic-dark-black);
 }
 
-.offers {
+.information.offers {
  text-transform: uppercase;
 }
 
@@ -266,6 +268,7 @@ color: var(--basic-dark-black);
 
 .clients-item a {
   opacity: 0.2;
+  display: block;
 }
 
 .clients-item a:hover,
@@ -299,6 +302,7 @@ color: var(--basic-dark-black);
   line-height: 18px;
   text-align: center;
   text-transform: uppercase;
+  display: block;
 }
 
 .contacts a :hover,
@@ -426,6 +430,7 @@ textarea:focus {
   font-weight: 500;
   line-height: 18px;
   text-transform: uppercase;
+  display: block;
 }
 
 .connection button:hover,
@@ -448,11 +453,16 @@ h1 {
   text-align: center;
 }
 
-legend {
+legend,
+.legend {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 18px;
   line-height: 30px;
+}
+
+.legend {
+  display: block;
 }
 
 .sorting ul,
@@ -469,7 +479,7 @@ legend {
   height: 80px;
 }
 
-.range .line-basic {
+.range .line-1 {
   background-color: var(--grey4);
   top: 39px;
   margin-left: 33px;
@@ -478,10 +488,8 @@ legend {
   height: 2px;
 }
 
-.line-1 .line-second {
+.line-1 .line-2 {
   background-color: var(--basic-green);
-  margin-top: 37px;
-  margin-left: 33px;
   position: absolute;
   width: 138px;
   height: 2px;
@@ -490,35 +498,21 @@ legend {
 .point-left,
 .point-right {
   style: none;
+  border-radius: 50%;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.15);
 }
 
 .point-left .ellipse-1 {
-  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.15);
   position: absolute;
-  margin-left: 18px;
-  margin-top: 28px;
+  margin-left: -20px;
+  margin-top: -9px;
   background-color: transparent;
 }
 
-.point-left .ellipse-2 {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+.point-right .ellipse-2 {
   position: absolute;
-  margin-left: 26px;
-  margin-top: 36px;
-  background-color: transparent;
-  z-index:2;
-}
-
-.point-right .ellipse-3 {
-  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.15);
-  position: absolute;
-  margin-left: 160px;
-  margin-top: 28px;
-  background-color: transparent;
-}
-
-.point-left .ellipse-4 {
-  position: absolute;
+  margin-left: 130px;
+  margin-top: -9px;
   background-color: transparent;
 }
 
@@ -555,6 +549,7 @@ legend {
  font: inherit;
  line-height: 18px;
  padding: 17px 89px 15px 88px;
+ display: block;
 }
 
 .filter button:hover,
@@ -577,6 +572,7 @@ legend {
   line-height: 18px;
   text-transform: uppercase;
   opacity: 0.3;
+  display: block;
 }
 
 .sorting-list a:hover,
@@ -607,6 +603,7 @@ legend {
   background-color: var(--basic-light-grey);
   padding: 17px 20px 15px 20px;
   text-align: center;
+  display: block;
 }
 
 .page-list.next {
@@ -627,10 +624,11 @@ legend {
 .page-item-current a,
 .page-item-current a:hover,
 .page-item-current a:focus,
-.page-item-current a:active{
+.page-item-current a:active {
   box-sizing: border-box;
   border: 3px solid var(--grey7);
   background-color: rgba(0, 0, 0, 0.0001);
+  display: block;
 }
 
   /*  Оформление карточек товара*/
@@ -642,6 +640,7 @@ legend {
 .element {
   opacity: 0.12;
   margin-bottom: 0;
+  display: block;
 }
 
 .catalog-item a {
@@ -649,6 +648,12 @@ legend {
   box-sizing: border-box;
   background-color: #888888;
   margin-top: 0px;
+  display: block;
+}
+
+.catalog-item:hover img.element,
+.catalog-item:focus img.element {
+opacity: 1;
 }
 
 .common-element {
