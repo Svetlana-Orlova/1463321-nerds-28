@@ -43,9 +43,24 @@ body {
   padding: 0;
   font-family: "Roboto", Arial, sans-serif;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   font-weight: normal;
   color: var(--basic-black);
+}
+
+.page {
+  height: 100%;
+}
+
+.page-body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+
+.main-header {
+
 }
 
 a {
@@ -62,8 +77,19 @@ img {
   line-height: 30px;
   color: var(--basic-dark-black);
   background-color: var(--basic-light-grey);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+.main-navigation-wrapper {
+ width: 100%;
+}
+
+.logo {
+  width: 160px;
+  height: 65px;
+}
 .logo:active {
   opacity: 0.5;
 }
@@ -92,8 +118,10 @@ img {
   width: 74px;
 }
 
+
+
 /*
-.nav-item-current::after {
+.nav-item-current a::after {
   content: "";
   position: absolute;
   left: 0;
