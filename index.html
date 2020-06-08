@@ -10,9 +10,9 @@
 </head>
 
 <body class="body-page">
-  <header class="main-header">
+  <header>
     <div class="main-navigation">
-      <nav class="main-navigation-inner">
+      <nav class="main-navigation-inner container">
         <a>
           <img src="img/nerds-logo.svg" class="logo" width="160" height="65" alt="Логотип сайта Нёрдс">
         </a>
@@ -27,39 +27,37 @@
         </div>
       </nav>
     </div>
-  </header>
-  <main class="main-part">
-    <h1 class="visually-hidden">Дизайн-студия Нёрдс</h1>
-    <div class="site-wrapper site-wrapper-1">
-      <div class="conteiner">
-        <section class="slider">
-          <h2 class="visually-hidden">Достоинства</h2>
-          <ul class="slide-list">
-            <li class="slide-item slide-current slide">
-              <h3 class="slide-title">Долго, дорого, скрупулезно.</h3>
-              <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
-              <a href="#" class="slide-button">Узнать больше</a>
-            </li>
-            <li class="slide-item slide">
-              <h3 class="slide-title">Любим математику как никто другой</h3>
-              <p>Никакого креатива, только математические формулы для расчета идеальных пропорций</p>
-              <a href="#" class="slide-button">Узнать больше</a>
-            </li>
-            <li class="slide-item slide">
-              <h3 class="slide-title">Только ночь, только хардкор</h3>
-              <p>Работать днём, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
-              <a href="#" class="slide-button">Узнать больше</a>
-            </li>
-          </ul>
-          <div class="slider-controls">
-            <button type="button" class="current" aria-label="Первый слайд"></button>
-            <button type="button" aria-label="Второй слайд"></button>
-            <button type="button" aria-label="Третий слайд"></button>
-          </div>
-        </section>
-      </div>
+    <div class="slider-wrapper slider-wrapper-1">
+      <section class="slider">
+        <h2 class="visually-hidden">Достоинства</h2>
+        <ul class="slide-list">
+          <li class="slide-item slide-current slide">
+            <h3 class="slide-title">Долго, дорого, скрупулезно.</h3>
+            <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
+            <a href="#" class="slide-button">Узнать больше</a>
+          </li>
+          <li class="slide-item slide">
+            <h3 class="slide-title">Любим математику как никто другой</h3>
+            <p>Никакого креатива, только математические формулы для расчета идеальных пропорций</p>
+            <a href="#" class="slide-button">Узнать больше</a>
+          </li>
+          <li class="slide-item slide">
+            <h3 class="slide-title">Только ночь, только хардкор</h3>
+            <p>Работать днём, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
+            <a href="#" class="slide-button">Узнать больше</a>
+          </li>
+        </ul>
+        <div class="slider-controls">
+          <button type="button" class="current" aria-label="Первый слайд"></button>
+          <button type="button" aria-label="Второй слайд"></button>
+          <button type="button" aria-label="Третий слайд"></button>
+        </div>
+      </section>
     </div>
-    <section class="suggestions">
+  </header>
+  <main>
+    <h1 class="visually-hidden">Дизайн-студия Нёрдс</h1>
+    <section class="suggestions container">
       <h2 class="visually-hidden">Наши продукты</h2>
       <ul class="suggestions-list">
         <li class="suggestions-item">
@@ -82,7 +80,7 @@
         </li>
       </ul>
     </section>
-    <section class="about">
+    <section class="about container">
       <div class="information">
         <h2 class="information-main">Мы - маленькая, но очень гордая дизайн-студия из Краснодара.</h2>
         <p class="information-more">Исповедуем принципы минимализма и чистоты. Ставим математический расчёт превыше креатива. Работаем не покладая рук,как роботы.</p>
@@ -112,7 +110,7 @@
         </ul>
       </div>
     </section>
-    <section class="clients">
+    <section class="clients container">
       <h2 class="visually-hidden">Наши клиенты</h2>
       <ul class="clients-list">
         <li class="clients-item">
@@ -140,14 +138,17 @@
     <section class="map">
       <div class="map-image">
         <img src="img/map-1.png" width="1440" height="416" alt="Карта с координатами компании">
-        <img src="img/map-marker-1.png" class="map-marker" width="231" height="190" alt="Маркер компании">
+        <!-- На потом
+        <img src="img/map-marker-1.png" class="map-marker" width="231" height="190" alt="Маркер компании"> -->
       </div>
-      <div class="contacts">
-        <h2>NЁRDS DESIGN STUDIO</h2>
-        <p>191186, Санкт-Петербург,<br>
-          ул. Б. Конюшенная, д. 19/8</p>
-        <p>тел. +7 (812) 275-75-75</p>
-        <a href="#">Напишите нам</a>
+      <div class="map-inner container">
+        <div class="contacts">
+          <h2>NЁRDS DESIGN STUDIO</h2>
+          <p>191186, Санкт-Петербург,<br>
+            ул. Б. Конюшенная, д. 19/8</p>
+          <p>тел. +7 (812) 275-75-75</p>
+          <a href="#">Напишите нам</a>
+        </div>
       </div>
     </section>
   </main>

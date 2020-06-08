@@ -59,7 +59,7 @@ body {
   align-content: start;
 }
 
-.main-part {
+.container {
   width: 1158px;
   margin: 0 auto;
   padding: 0 10px;
@@ -74,20 +74,18 @@ img {
   height: auto;
 }
 
-.main-header {
-  background-color: var(--basic-light-grey);
-  padding: 49px 0 0 0;
+.main-navigation {
+ background-color: var(--basic-light-grey);
 }
 
 .main-navigation-inner {
   font-size: 16px;
   line-height: 0px;
   color: var(--basic-dark-black);
-  background-color: var(--basic-light-grey);
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0px;
+  padding: 49px 0 0 0;
   width: 1158px;
   margin: 0 auto;
   justify-content: space-between;
@@ -167,17 +165,18 @@ img {
   bottom: -23px;
 }
 
-.site-wrapper {
-  background-color: var(--basic-light-grey);
+.slider-wrapper {
   background-repeat: no-repeat;
   margin-bottom: 80px;
   min-width: 1160px;
+  width: 1160px;
+  margin: 0 auto;
   background-position: right center;
   position: relative;
   min-height: 431px;
 }
 
-.site-wrapper::after {
+.slider-wrapper::after {
   content: "";
   display: block;
   height: 1px;
@@ -185,22 +184,16 @@ img {
   margin-top: 100px;
 }
 
-.site-wrapper-1 {
+.slider-wrapper-1 {
   background-image: url(../img/nerds-index-slide1-1.png);
 }
 
-.site-wrapper-2 {
+.slider-wrapper-2 {
   background-image: url(../img/nerds-index-slide2-1.png);
 }
 
-.site-wrapper-3 {
+.slider-wrapper-3 {
   background-image: url(../img/nerds-index-slide3-1.png);
-}
-
-.conteiner {
-  width: 538px;
-  margin: 0px;
-  padding: 0;
 }
 
 .slider {
@@ -543,14 +536,14 @@ img {
   margin-right: -140px;
 }
 
-.map-image .map-marker{
+/* .map-image .map-marker{
   z-index: 0;
   position: absolute;
   display: block;
   background: transparent;
   top: 86px;
   left: 822px;
-}
+} */
 
 .contacts {
   max-width: 319px;
