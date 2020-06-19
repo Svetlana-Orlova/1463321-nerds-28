@@ -114,7 +114,6 @@ img {
 .logo {
   width: 160px;
   height: 65px;
-  /*! padding-left: 35px; */
 }
 
 .logo:active {
@@ -1276,12 +1275,12 @@ legend,
   line-height: 30px;
 }
 
-.announcement a:hover,
-.announcement a:focus {
+.announcement h4:hover,
+.announcement h4:focus {
   color: var(--basic-red);
 }
 
-.announcement a:focus {
+.announcement h4:active {
   color: var(--basic-dark-black);
   opacity: 0.3;
 }
