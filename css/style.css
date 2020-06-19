@@ -600,8 +600,8 @@ img {
   display: inline-block;
 }
 
-.contacts a :hover,
-.contacts a :focus {
+.contacts a:hover,
+.contacts a:focus {
   background-color: var(--red1);
 }
 
