@@ -38,38 +38,39 @@
       <div class="aside-bar">
         <aside class="main-aside">
           <form class="filter" action="https://echo.htmlacademy.ru" method="get">
-            <fieldset class="price">
-              <legend class="legend">Стоимость:</legend>
-              <div class="range">
-                <div class="line-1">
-                  <div class="line-2">
-                    <div class="point-left">
-                      <img src="img/filter-button.svg" class="ellipse-1" width="20px" hight="20px">
-                    </div>
-                    <div class="point-right">
-                      <img src="img/filter-button.svg" class="ellipse-2" width="20px" hight="20px">
-                    </div>
+            <fieldset class="filter-item">
+              <legend>Стоимость:</legend>
+              <div class="range-filter">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
                   </div>
+                  <div class="toggle toggle-min"></div>
+                  <div class="toggle toggle-max"></div>
+                </div>
+                <div class="price-controls">
+                  <label class="min-price">
+                    от <input type="number" name="min-price" value="0">
+                  </label>
+                  <label class="max-price">
+                    до <input type="number" name="max-price" value="15000">
+                  </label>
                 </div>
               </div>
-              <label for="price-from">от</label>
-              <input type="number" id="price-from" min="0" max="15000" step="50" value="0">
-              <label for="price-to">до</label>
-              <input type="number" id="price-to" min="0" max="15000" step="50" value="15000">
             </fieldset>
             <fieldset>
-              <legend>Сетка:</legend>
+              <legend class="filter-net">Сетка:</legend>
               <ul class="net-list">
                 <li class="net-item">
-                  <input type="radio" class="filter-input" name="catalog" id="filter-adapt-net" checked>
+                  <input type="radio" class="visually-hidden filter-input-radio filter-input" name="catalog" id="filter-adapt-net" checked>
                   <label for="filter-adapt-net">Адаптивная</label>
                 </li>
                 <li class="net-item">
-                  <input type="radio" class="filter-input" name="catalog" id="filter-fix-net">
+                  <input type="radio" class="visually-hidden filter-input-radio filter-input" name="catalog" id="filter-fix-net">
                   <label for="filter-fix-net">Фиксированная</label>
                 </li>
                 <li class="net-item">
-                  <input type="radio" class="filter-input" name="catalog" id="filter-stretch-net">
+                  <input type="radio" class="visually-hidden filter-input-radio filter-input" name="catalog" id="filter-stretch-net">
                   <label for="filter-stretch-net">Резиновая</label>
                 </li>
               </ul>
@@ -78,23 +79,23 @@
               <legend class="legend-features">Особенности:</legend>
               <ul class="features-list">
                 <li class="features-item">
-                  <input type="checkbox" class="filter-input" name="slider" id="filter-slider" checked>
+                  <input type="checkbox" class="visually-hidden filter-input-checkbox filter-input" name="slider" id="filter-slider" checked>
                   <label for="filter-slider">Слайдер</label>
                 </li>
                 <li class="features-item">
-                  <input type="checkbox" class="filter-input" name="benefits-block" id="filter-benefits-block">
+                  <input type="checkbox" class="visually-hidden filter-input-checkbox filter-input" name="benefits-block" id="filter-benefits-block">
                   <label for="filter-benefits-block">Блок преимуществ</label>
                 </li>
                 <li class="features-item">
-                  <input type="checkbox" class="filter-input" name="news" id="filter-news" checked>
+                  <input type="checkbox" class="visually-hidden filter-input-checkbox filter-input" name="news" id="filter-news" checked>
                   <label for="filter-news">Новости</label>
                 </li>
                 <li class="features-item">
-                  <input type="checkbox" class="filter-input" name="gallery" id="filter-gallery">
+                  <input type="checkbox" class="visually-hidden filter-input-checkbox filter-input" name="gallery" id="filter-gallery">
                   <label for="filter-gallery">Галерея</label>
                 </li>
                 <li class="features-item">
-                  <input type="checkbox" class="filter-input" name="basket" id="filter-basket">
+                  <input type="checkbox" class="visually-hidden filter-input-checkbox filter-input" name="basket" id="filter-basket">
                   <label for="filter-basket">Корзина</label>
                 </li>
               </ul>
@@ -176,7 +177,7 @@
                   <img src="img/img-barbershop-1.jpg" class="card" width="360" height="580" alt="Проект Borodinski">
                 </a>
               </div>
-                <!-- попап с ценником -->
+              <!-- попап с ценником -->
               <div class="announcement">
                 <a href="#">
                   <h4>Barbershop</h4>
@@ -220,10 +221,11 @@
             <!-- попап с ценником -->
             <div class="announcement">
               <a href="#">
-                <h4>А plus</h4><a>
-                  <p>Лендинг курсов повышения<br>
-                    квалификации </p>
-                  <button type="button">9 900 ₽</button>
+                <h4>А plus</h4>
+              </a>
+              <p>Лендинг курсов повышения<br>
+                квалификации </p>
+              <button type="button">9 900 ₽</button>
             </div>
           </li>
           <li class="catalog-item">
@@ -266,8 +268,9 @@
     </div>
     <section class="map">
       <div class="map-image">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002735!2d30.320858715590237!3d59.938719169054785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1591626314459!5m2!1sru!2sru" width="100%" height="416" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-        <!-- <img src="img/map-marker-1.png" class="map-marker" width="231" height="190" alt="Маркер компании"> -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002735!2d30.320858715590237!3d59.938719169054785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1592579437157!5m2!1sru!2sru"
+          width="100%" height="416" allowfullscreen="" title="Офис компании по адресу Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"></iframe>
       </div>
       <div class="map-inner container">
         <div class="contacts">
