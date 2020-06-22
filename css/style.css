@@ -81,7 +81,6 @@ img {
 
 .main-navigation-inner {
   font-size: 16px;
-  line-height: 0px;
   color: var(--basic-dark-black);
   display: flex;
   flex-direction: row;
@@ -96,12 +95,13 @@ img {
   position: relative;
   max-width: 140px;
   padding-left: 25px;
+  margin-top: 25px
 }
 
 .basket::before {
   content: "";
   position: absolute;
-  top: 20px;
+  top: 30px;
   left: -14px;
   width: 15px;
   height: 15px;
@@ -139,6 +139,7 @@ img {
 
 .nav-list-main a {
   padding: 0;
+  margin: 25px 10px 0;
 }
 
 .nav-list a:focus,
@@ -159,10 +160,10 @@ img {
   content: "";
   position: absolute;
   display: block;
-  width: 100%;
+  width: 75%;
   height: 2px;
   background-color: var(--basic-red);
-  bottom: -23px;
+  bottom: -13px;
 }
 
 .common-slider {
@@ -487,6 +488,7 @@ img {
 .clients-list {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   margin: 0;
   padding: 0;
@@ -499,6 +501,7 @@ img {
   width: 25%;
   display: flex;
   flex-wrap: wrap;
+  flex-shrink: 0;
   align-items: center;
   justify-content: space-between;
   position: relative;
@@ -550,7 +553,6 @@ img {
 .map-image {
   position: absolute;
   display: block;
-  z-index: -1;
   top: 0;
   right: 0;
   left: 0;
@@ -571,6 +573,8 @@ img {
   text-align: center;
   background-color: var(--basic-white);
   display: inline-block;
+  z-index: 1;
+  position: relative;
 }
 
 .contacts h2 {
@@ -776,6 +780,7 @@ textarea:focus {
   line-height: 18px;
   text-transform: uppercase;
   display: inline-block;
+  cursor: pointer;
 }
 
 .connection .button:hover,
@@ -1060,6 +1065,7 @@ legend,
   padding: 17px 89px 15px 88px;
   display: inline-block;
   margin-top: 48px;
+  cursor: pointer;
 }
 
 .filter button:hover,
@@ -1291,6 +1297,11 @@ legend,
   color: var(--grey6);
 }
 
+.announcement a:hover,
+.announcement a:focus {
+  z-index: 10;
+}
+
 .catalog-item button {
   border: 0px;
   color: var(--basic-white);
@@ -1303,6 +1314,7 @@ legend,
   line-height: 18px;
   text-align: center;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .catalog-item button:hover,
