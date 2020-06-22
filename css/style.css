@@ -560,6 +560,7 @@ img {
   background-image: url(../img/group-12.png);
   background-repeat: no-repeat;
   background-position: center;
+  width: 100%;
 }
 
 .map-image iframe {
