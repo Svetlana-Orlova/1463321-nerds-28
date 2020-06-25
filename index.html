@@ -149,7 +149,7 @@
           <p>191186, Санкт-Петербург,<br>
             ул. Б. Конюшенная, д. 19/8</p>
           <p>тел. +7 (812) 275-75-75</p>
-          <a href="#">Напишите нам</a>
+          <a href="connection.html" class="write-us">Напишите нам</a>
         </div>
       </div>
     </section>
@@ -186,26 +186,28 @@
   <section class="connection">
     <div class="connection-description">
       <h2>Напишите нам</h2>
-      <a href="#">
+      <a href="#" class="close-button">
         <img src="img/close-cross.svg" class="cross" width="21" height="21" alt="Закрыть окно">
       </a>
     </div>
     <form class="appointment-form" action="https://echo.htmlacademy.ru" method="post">
       <p class="place">
         <label for="appointment-name">Ваше имя:</label>
-        <input id="appointment-name" type="text" name="name" placeholder="Имя Фамилия">
+        <input id="appointment-name" class="appointment-name" type="text" name="name" placeholder="Имя Фамилия">
       </p>
       <p class="place">
         <label for="appointment-email">Ваш email:</label>
-        <input id="appointment-email" type="email" name="email" placeholder="email@example.com">
+        <input id="appointment-email" class="appointment-email" type="email" name="email" placeholder="email@example.com">
       </p>
       <p class="place place-textarea">
         <label for="appointment-comments">Текст письма:</label>
-        <textarea id="appointment-comments" name="comments" rows="4" placeholder="В свободной форме"></textarea>
+        <textarea id="appointment-comments" class="appointment-comments" name="comments" rows="4" placeholder="В свободной форме"></textarea>
       </p>
       <button class="button" type="submit">Отправить</button>
     </form>
   </section>
+
+  <script src="js/connection.js"></script>
 </body>
 
 </html>

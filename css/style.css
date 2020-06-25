@@ -715,6 +715,16 @@ img {
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
 }
 
+.connection-show {
+  display: block;
+  animation: bounce 0.5s;
+  z-index: 10;
+}
+
+.connection-error {
+  animation: shake 0.6s;
+}
+
 .connection-description h2 {
   font-weight: bold;
   color: var(--basic-dark-black);
@@ -1327,4 +1337,47 @@ legend,
 .catalog-item .price:active {
   background-color: var(--red2);
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+}
+
+/* Animations */
+
+@keyframes bounce {
+  0% {
+    transform: translateX(1400px);
+  }
+
+  70% {
+    transform: translateX(-100px);
+  }
+
+  90% {
+    transform: translateX(50px);
+  }
+
+  100% {
+    transform: translateY(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }
