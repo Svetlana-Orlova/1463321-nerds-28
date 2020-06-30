@@ -1,4 +1,4 @@
-.nav-link:root {
+:root {
   --basic-red: #FB565A;
   --red1: #E74246;
   --red2: #D7373B;
@@ -211,19 +211,18 @@ img {
     background-color: var(--yellow2);
  }
 
-.common-slider {
+.slider {
   background-color: var(--basic-light-grey);
+  position: relative;
 }
 
-.slider-wrapper {
-  background-repeat: no-repeat;
+.slider-inner {
   margin-bottom: 80px;
-  background-position: right center;
   position: relative;
   min-height: 431px;
 }
 
-.slider-wrapper::after {
+.slider-inner::after {
   content: "";
   display: block;
   height: 1px;
@@ -231,21 +230,9 @@ img {
   margin-top: 100px;
 }
 
-.slider-wrapper-1 {
-  background-image: url(../img/nerds-index-slide1-1.png);
-}
-
-.slider-wrapper-2 {
-  background-image: url(../img/nerds-index-slide2-1.png);
-}
-
-.slider-wrapper-3 {
-  background-image: url(../img/nerds-index-slide3-1.png);
-}
-
-.slider {
-  position: relative;
-  top: 80px;
+.slide-button {
+  width:240px;
+  margin-top: 38px;
 }
 
 .slide-list {
@@ -254,38 +241,53 @@ img {
   list-style: none;
 }
 
-.slide {
-  width: 538px;
-  position: relative;
+.slide-item {
   display: none;
-  margin: 0;
-  padding: 0;
+  background-repeat: no-repeat;
+  padding-top: 69px;
+  padding-bottom: 80px;
 }
 
-.slide-current {
+.slide-item-1 {
+  background-position: center right;
+  background-image: url(../img/nerds-index-slide1-1.png);
+}
+
+.slide-item-2 {
+  background-position: center right;
+  background-image: url(../img/nerds-index-slide2-1.png);
+}
+
+.slide-item-3 {
+  background-position: center right;
+  background-image: url(../img/nerds-index-slide3-1.png);
+}
+
+.slide-item-current {
   display: block;
 }
 
 .slide-title {
   font-size: 55px;
-  line-height: 55px;
+  line-height: 1;
   font-weight: 500;
   color: var(--basic-dark-black);
-  margin: 0px;
-  margin-bottom: 25px;
-  padding: 0px;
+  margin: 0;
+  width: 500px;
 }
 
-.slide p {
+.slide-text {
+  width: 365px;
   margin: 0;
   padding: 0;
-  margin-bottom: 38px;
+  margin-top: 27px;
 }
 
 .slider-controls {
   position: absolute;
-  top: 240px;
-  left: 536px;
+  bottom: 45px;
+  left: 50%;
+  margin-left: -44px;
   z-index: 10;
   display: flex;
   width: 88px;
