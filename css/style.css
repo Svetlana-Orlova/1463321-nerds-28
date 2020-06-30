@@ -39,7 +39,7 @@
 }
 
 body {
-  min-width: 1178px;
+  min-width: 1260px;
   margin: 0;
   padding: 0;
   font-family: "Roboto", Arial, sans-serif;
@@ -61,7 +61,7 @@ body {
 }
 
 .container {
-  width: 1158px;
+  width: 1240px;
   margin: 0 auto;
   padding: 0 10px;
 }
@@ -86,34 +86,14 @@ img {
   flex-direction: row;
   align-items: center;
   padding: 49px 0 0 0;
-  width: 1158px;
+  width: 1240px;
   margin: 0 auto;
   justify-content: space-between;
 }
 
-.basket {
-  position: relative;
-  max-width: 140px;
-  padding-left: 25px;
-  margin-top: 25px
-}
-
-.basket::before {
-  content: "";
-  position: absolute;
-  top: 30px;
-  left: -25px;
-  width: 15px;
-  height: 15px;
-  background-image: url(../img/cart-icon.svg);
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  display: block;
-}
-
 .logo {
-  width: 160px;
-  height: 65px;
+  width: 192px;
+  height: 92px;
 }
 
 .logo:active {
@@ -126,20 +106,24 @@ img {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   flex-grow: 1;
-  width: 560px;
+  width: 550px;
 }
 
 .nav-list a {
   color: var(--basic-dark-black);
   display: block;
   padding: 25px 0;
+  margin-top: -12px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 .nav-item {
   padding: 0;
-  margin: 25px 10px 0;
+  margin: 25px 0 -2px;
 }
 
 .nav-list a:focus,
@@ -165,6 +149,44 @@ img {
   background-color: var(--basic-red);
   bottom: 0;
 }
+
+.nav-item:nth-of-type(2),
+.nav-item:nth-of-type(3) {
+  flex-grow: 1.5;
+}
+
+.nav-item:first-of-type {
+  margin-left: 26px;
+  margin-right: 33px;
+}
+ .nav-clients {
+  margin-left: 16px;
+  margin-right: 16px;
+ }
+
+ .nav-contacts {
+  margin-left: 14px;
+  margin-right: -14px;
+ }
+
+ .main-basket .basket {
+   position: relative;
+   max-width: 140px;
+   margin-top: 20px;
+ }
+
+ .main-basket .basket::before {
+   content: "";
+   position: absolute;
+   top: 30px;
+   left: -44px;
+   width: 25px;
+   height: 25px;
+   background-image: url(../img/cart-icon.svg);
+   background-repeat: no-repeat;
+   background-position: 0 0;
+   display: block;
+ }
 
 .common-slider {
   background-color: var(--basic-light-grey);
@@ -308,7 +330,7 @@ img {
 .suggestions-item {
   text-align: left;
   width: 300px;
-  margin-right: 100px;
+  margin-right: 34px;
   margin-bottom: 121px;
 }
 
@@ -317,6 +339,7 @@ img {
   font-size: 24px;
   line-height: 30px;
   color: var(--basic-dark-black);
+  text-transform: uppercase;
 }
 
 .suggestions-item p {
