@@ -140,76 +140,76 @@ img {
 }
 
 .nav-link-basket {
-   position: relative;
-   padding-left: 39px;
- }
+  position: relative;
+  padding-left: 39px;
+}
 
 .nav-link-basket::before {
-   content: "";
-   position: absolute;
-   top: 30px;
-   left: 0;
-   width: 15px;
-   height: 15px;
-   background-image: url(../img/cart-icon.svg);
-   background-repeat: no-repeat;
-   background-position: 0 0;
-   display: block;
- }
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  background-image: url(../img/cart-icon.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  display: block;
+}
 
 .button {
   color: var(--basic-white);
-   background-color: var(--basic-red);
-   border-radius: 3px;
-   border: 0;
-   text-decoration: none;
-   padding: 13px;
-   font: inherit;
-   text-align: center;
-   font-weight: 500;
-   vertical-align: top;
-   text-transform: uppercase;
-   display: inline-block;
-   cursor: pointer;
-   box-sizing: border-box;
- }
+  background-color: var(--basic-red);
+  border-radius: 3px;
+  border: 0;
+  text-decoration: none;
+  padding: 13px;
+  font: inherit;
+  text-align: center;
+  font-weight: 500;
+  vertical-align: top;
+  text-transform: uppercase;
+  display: inline-block;
+  cursor: pointer;
+  box-sizing: border-box;
+}
 
- .button:hover,
- .button:focus {
-   background-color: var(--red1);
- }
+.button:hover,
+.button:focus {
+  background-color: var(--red1);
+}
 
- .button:active {
-   background-color: var(--red2);
-   color: rgba(255, 255, 255, 0.3);
-   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
- }
+.button:active {
+  background-color: var(--red2);
+  color: rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+}
 
- .button-green {
-    background-color: var(--basic-green);
- }
+.button-green {
+  background-color: var(--basic-green);
+}
 
- .button-green:hover,
- .button-green:focus  {
-    background-color: var(--green2);
- }
+.button-green:hover,
+.button-green:focus {
+  background-color: var(--green2);
+}
 
- .button-green:active  {
-    background-color: var(--green1);
- }
+.button-green:active {
+  background-color: var(--green1);
+}
 
- .button-yellow {
-    background-color: var(--basic-yellow);
- }
+.button-yellow {
+  background-color: var(--basic-yellow);
+}
 
- .button-yellow:hover,
- .button-yellow:focus  {
-    background-color: var(--yellow2);
- }
+.button-yellow:hover,
+.button-yellow:focus {
+  background-color: var(--yellow2);
+}
 
- .button-yellow:active  {
-    background-color: var(--yellow1);
- }
+.button-yellow:active {
+  background-color: var(--yellow1);
+}
 
 .slider {
   background-color: var(--basic-light-grey);
@@ -221,7 +221,7 @@ img {
 }
 
 .slider-button {
-  width:240px;
+  width: 240px;
   margin-top: 39px;
 }
 
@@ -325,6 +325,7 @@ img {
   width: 300px;
   margin-right: 100px;
 }
+
 .suggestions-item:last-of-type {
   margin-right: 5px;
 }
@@ -783,19 +784,7 @@ textarea:focus {
 }
 
 .connection .button {
-  border: 0px;
-  color: var(--basic-white);
-  background-color: var(--basic-red);
-  border-radius: 3px;
-  padding: 17px 83px 15px 83px;
-  font: inherit;
-  text-align: center;
-  font-weight: 500;
-  line-height: 18px;
-  text-transform: uppercase;
-  display: inline-block;
-  cursor: pointer;
-  vertical-align: top;
+  width: 260px;
 }
 
 .connection .button:hover,
@@ -1146,7 +1135,7 @@ input[type=number] {
 }
 
 .sorting-list a:hover,
-.sorting-list a:focus,{
+.sorting-list a:focus, {
   opacity: 0.6;
 }
 
@@ -1368,7 +1357,6 @@ input[type=number] {
 
 /* Animations */
 @keyframes bounce {
-
   0% {
     transform: translate(24%, -80%);
   }
