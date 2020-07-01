@@ -6,27 +6,27 @@
   <title>HTML Academy: Нёрдс</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/styles.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
-  <header class="main-header">
-    <div class="main-navigation">
-      <nav class="main-navigation-inner">
-        <a href="index.html">
-          <img src="img/nerds-logo.svg" class="logo" width="160" height="65" alt="Логотип сайта Нёрдс">
-        </a>
-        <ul class="nav-list nav-list-main">
-          <li class="nav-item"><a href="#">Студия</a></li>
-          <li class="nav-item"><a href="#">Клиенты</a></li>
-          <li class="nav-item nav-link-current"><a>Магазин</a></li>
-          <li class="nav-item"><a href="#">Контакты</a></li>
-        </ul>
-        <div class=" nav-list main-basket">
-          <a href="#" class="basket">Корзина</a>
-        </div>
-      </nav>
-    </div>
+    <header>
+      <div class="main-navigation">
+        <nav class="main-navigation-inner container">
+          <a href="index.html" class="main-navigation-link">
+            <img src="img/nerds-logo.svg" class="logo" width="160" height="65" alt="Логотип сайта Нёрдс">
+          </a>
+          <ul class="nav-list">
+            <li class="nav-item"><a href="index.html" class="nav-link">Студия</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Клиенты</a></li>
+            <li class="nav-item"><a href="#" class="nav-link nav-link-current">Магазин</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Контакты</a></li>
+          </ul>
+          <div class="nav-list">
+            <a href="#" class="nav-link nav-link-basket">Корзина</a>
+          </div>
+        </nav>
+      </div>
   </header>
   <main>
     <div class="page-title">
@@ -49,10 +49,10 @@
               </div>
               <div class="price-controls">
                 <label class="min-price">
-                  от <input type="number" name="min-price" value="0">
+                  от <input type="number" name="min-price" placeholder="0">
                 </label>
                 <label class="max-price">
-                  до <input type="number" name="max-price" value="15000">
+                  до <input type="number" name="max-price" placeholder="15 000">
                 </label>
               </div>
             </div>
@@ -99,13 +99,13 @@
               </li>
             </ul>
           </fieldset>
-          <button class="show" type="submit">Показать</button>
+          <button class="button button-grey" type="submit">Показать</button>
         </form>
       </div>
       <div class="main-content">
         <div class="sorting">
           <h2 class="legend">Сортировать:</h2>
-          <ul class="sorting-list">
+          <ul class="sorting-list sorting-list-range">
             <li class="sorting-item">
               <a href="#">По цене</a>
             </li>
@@ -137,8 +137,8 @@
                 <!-- попап с ценником -->
                 <div class="announcement">
                   <h4>Sedona</h4>
-                  <p>Информационный сайт для туристов</p>
-                  <div class="price">9 900 ₽</div>
+                  <p>Информационный сайт <br>для туристов</p>
+                  <div class="button price">9 900 ₽</div>
                 </div>
               </a>
             </li>
@@ -152,8 +152,8 @@
                 <!-- попап с ценником -->
                 <div class="announcement">
                   <h4>Pink app</h4>
-                  <p>Продуктивный лендинг приложения для iOS и Android</p>
-                  <div class="price">9 900 ₽</div>
+                  <p>Продуктивный лендинг <br>приложения для iOS и Android</p>
+                  <div class="button price">9 900 ₽</div>
                 </div>
               </a>
             </li>
@@ -168,7 +168,7 @@
                 <div class="announcement">
                   <h4>Barbershop</h4>
                   <p>Сайт салона красоты.<br>Для мужчин, да. </p>
-                  <div class="price">9 900 ₽</div>
+                  <div class="button price">9 900 ₽</div>
                 </div>
               </a>
             </li>
@@ -183,7 +183,7 @@
                 <div class="announcement">
                   <h4>Mishka</h4>
                   <p>Интернет-магазин<br>вязаных игрушек</p>
-                  <div class="price">9 900 ₽</div>
+                  <div class="button price">9 900 ₽</div>
                 </div>
               </a>
             </li>
@@ -198,7 +198,7 @@
                 <div class="announcement">
                   <h4>А plus</h4>
                   <p>Лендинг курсов повышения квалификации </p>
-                  <div class="price">9 900 ₽</div>
+                  <div class="button price">9 900 ₽</div>
                 </div>
               </a>
             </li>
@@ -213,7 +213,7 @@
                 <div class="announcement">
                   <h4>Кваст</h4>
                   <p>Промо-сайт производителя крафтового кваса</p>
-                  <div class="price">9 900 ₽</div>
+                  <div class="button price">9 900 ₽</div>
                 </div>
               </a>
             </li>
@@ -238,15 +238,15 @@
     <section class="map">
       <div class="map-image">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002735!2d30.320858715590237!3d59.938719169054785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1592579437157!5m2!1sru!2sru"
-          width="1440" height="416" allowfullscreen="" title="Офис компании по адресу Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"></iframe>
-      </div>
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002735!2d30.320858715590237!3d59.938719169054785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1591626314459!5m2!1sru!2sru"
+          width="1440" height="416" allowfullscreen title="Офис компании по адресу Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"></iframe>
+    </div>
       <div class="map-inner container">
         <div class="contacts">
           <h2>NЁRDS DESIGN STUDIO</h2>
           <p>191186, Санкт-Петербург,<br>
             ул. Б. Конюшенная, д. 19/8</p>
-          <p>тел. +7 (812) 275-75-75</p>
+          <p class="contacts-tel">тел. +7 (812) 275-75-75</p>
           <a href="connection.html" class="write-us">Напишите нам</a>
         </div>
       </div>
