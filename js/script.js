@@ -48,6 +48,7 @@ close.addEventListener("click", function(evt) {
 form.addEventListener("submit", function(evt) {
   if (!username.value || !useremail.value || !textarea.value) {
     evt.preventDefault();
+    form.classList.add("appointment-form-error");
     popup.classList.remove("connection-error");
     popup.offsetWidth = popup.offsetWidth;
     popup.classList.add("connection-error");
