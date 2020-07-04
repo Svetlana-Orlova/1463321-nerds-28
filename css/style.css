@@ -84,7 +84,7 @@ img {
   height: 65px;
   display: block;
   min-width: 160px;
-  padding-right: 25px;
+  padding-right: 26px;
 }
 
 .logo {
@@ -103,6 +103,9 @@ img {
   padding-left: 0;
   display: flex;
   flex-wrap: wrap;
+}
+.nav-list-main {
+  padding-right: 25px;
 }
 
 .nav-link {
@@ -375,7 +378,8 @@ img {
   content: "";
   display: block;
   position: absolute;
-  width: 100%;
+  left: 20px;
+  right: 20px;
   height: 2px;
   background-color: var(--basic-light-grey);
   bottom: -52px;
@@ -528,7 +532,8 @@ img {
   content: "";
   display: block;
   position: absolute;
-  width: 100%;
+  left: 20px;
+  right: 20px;
   height: 2px;
   background-color: var(--basic-light-grey);
   bottom: -38px;
@@ -583,10 +588,11 @@ img {
 }
 
 .contacts .contacts-tel {
-  margin-top: 18px;
+  display: block;
+  color: var(--grey6);
 }
 
-.contacts a {
+.contacts .write-us {
   color: var(--basic-white);
   background-color: var(--basic-red);
   border-radius: 3px;
@@ -599,15 +605,15 @@ img {
   text-transform: uppercase;
   display: inline-block;
   vertical-align: top;
-  margin-top: 21px;
+  margin-top: 33px;
 }
 
-.contacts a:hover,
-.contacts a:focus {
+.contacts .write-us:hover,
+.contacts .write-us:focus {
   background-color: var(--red1);
 }
 
-.contacts a:active {
+.contacts .write-us:active {
   background-color: var(--red2);
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
@@ -695,10 +701,13 @@ img {
 }
 
 .appointment-form {
+  padding: 0px 100px 105px 99px;
+}
+
+.appointment-form-border {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 0px 100px 105px 99px;
 }
 
 .place {
@@ -733,6 +742,8 @@ img {
 
 .appointment-form-error {
   border: 2px solid var(--basic-red);
+  padding: 10px;
+  margin-bottom: 15px;
 }
 
 .connection-description h2 {
@@ -844,7 +855,7 @@ a:active .cross {
   padding: 0;
   padding-top: 68px;
   padding-bottom: 108px;
-  padding-left: 132px;
+  padding-right: 17px;
 }
 
 .catalog-content {
@@ -869,7 +880,7 @@ legend,
 .legend,
 .filter-net {
   display: block;
-  padding-top: 56px;
+  padding-top: 55px;
 }
 
 .sorting ul,

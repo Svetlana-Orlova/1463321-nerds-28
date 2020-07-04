@@ -2,6 +2,7 @@ var link = document.querySelector(".write-us");
 var popup = document.querySelector(".connection");
 var close = popup.querySelector(".close-button");
 var form = popup.querySelector(".appointment-form");
+var former = popup.querySelector(".appointment-form-border");
 var username = popup.querySelector(".appointment-name");
 var useremail = popup.querySelector(".appointment-email");
 var textarea = popup.querySelector(".appointment-comments");
@@ -48,7 +49,7 @@ close.addEventListener("click", function(evt) {
 form.addEventListener("submit", function(evt) {
   if (!username.value || !useremail.value || !textarea.value) {
     evt.preventDefault();
-    form.classList.add("appointment-form-error");
+    former.classList.add("appointment-form-error");
     popup.classList.remove("connection-error");
     popup.offsetWidth = popup.offsetWidth;
     popup.classList.add("connection-error");
